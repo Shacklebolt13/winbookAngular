@@ -7,20 +7,21 @@ import { DiscoverComponent } from './discover/discover.component';
 
 const routes: Routes = [
   {
-    path: '',component:GenericPageComponent,
-    children:[
+    path: '',
+    component: GenericPageComponent,
+    children: [
       {
-        path:'about', component:AboutComponent
+        path: 'about',
+        component: AboutComponent,
       },
-      { path: 'home', component: HomeComponent,},
-      {path:'discover', component:DiscoverComponent}
-    ]
+      { path: '', component: HomeComponent },
+      { path: 'discover', component: DiscoverComponent },
+    ],
   },
-  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
