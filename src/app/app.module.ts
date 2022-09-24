@@ -25,6 +25,8 @@ import { PostComponent } from './home/post/post.component';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { CredentialPageComponent } from './credential-page/credential-page.component';
+import { LoginComponent } from './credential-page/login/login.component';
+import { SignupComponent } from './credential-page/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { CredentialPageComponent } from './credential-page/credential-page.compo
     DiscoverComponent,
     MenuComponent,
     CredentialPageComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
