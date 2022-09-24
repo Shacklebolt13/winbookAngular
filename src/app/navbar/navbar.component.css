@@ -1,0 +1,12 @@
+.mat-tab-nav-panel{
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+}
+
+.navmenu{
+    
+    right: 20px;
+    position: fixed;
+    max-width: 100%;
+}

@@ -1,0 +1,14 @@
+<mat-toolbar class="heading" color="primary">
+    <h1>Winbook</h1>
+    <app-menu class="navmenu"></app-menu>
+</mat-toolbar>
+<nav mat-tab-nav-bar class="navbar">
+    <mat-tab-nav-panel color="primary">
+        <a mat-tab-link active="{{(this.activeLink === 1)}}" (click)="this.activeLink=1" routerLink="">
+            <mat-icon color="primary">home</mat-icon>
+        </a>
+        <a mat-tab-link active="{{(this.activeLink === 2)}}" (click)="this.activeLink=2" routerLink="/discover">
+            <mat-icon color="primary">people</mat-icon>
+        </a>
+    </mat-tab-nav-panel>
+</nav>
