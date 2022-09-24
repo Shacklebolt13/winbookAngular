@@ -23,6 +23,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { PostComponent } from './home/post/post.component';
 import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { CredentialPageComponent } from './credential-page/credential-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +36,7 @@ import { MatCardModule } from '@angular/material/card';
     GenericPageComponent,
     DiscoverComponent,
     MenuComponent,
+    CredentialPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,7 @@ import { MatCardModule } from '@angular/material/card';
     MatSlideToggleModule,
     MatTabsModule,
     MatMenuModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

@@ -7,6 +7,6 @@
 .navmenu{
     
     right: 20px;
-    position: fixed;
+    position: absolute;
     max-width: 100%;
 }
