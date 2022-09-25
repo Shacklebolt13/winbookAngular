@@ -8,6 +8,8 @@ export class ConstantService {
   public readonly API_URL_LOGIN = this.API_URL + 'login/';
   public readonly API_URL_SIGNUP = this.API_URL + 'signup/';
   public readonly API_URL_FORGOT = this.API_URL + 'forgot/';
+  public readonly API_URL_SEARCH_USERS = this.API_URL + 'user/s/';
+  public readonly API_URL_GET_USER_BY_USERNAME = this.API_URL + 'user/f/';
 
   constructor() {}
 }

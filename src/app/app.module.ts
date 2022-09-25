@@ -32,6 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { SearchbarComponent } from './discover/searchbar/searchbar.component';
+import { SearchresultsComponent } from './discover/searchresults/searchresults.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +48,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CredentialPageComponent,
     LoginComponent,
     SignupComponent,
+    SearchbarComponent,
+    SearchresultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     MatCardModule,
     BrowserAnimationsModule,
+    MatPaginatorModule,
     MatProgressBarModule,
     MatSnackBarModule,
     MatSidenavModule,

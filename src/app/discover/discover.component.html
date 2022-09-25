@@ -1,1 +1,12 @@
-<p>discover works!</p>
+<mat-card class="search-page">
+    <mat-card-header class="search-bar-area">
+        <app-searchbar class="search-bar"></app-searchbar>
+    </mat-card-header>
+    <mat-card-content class="search-results-area">
+        <app-searchresults></app-searchresults>
+    </mat-card-content>
+    <mat-card-footer class="search-paging-area">
+        <mat-paginator [length]="100" [pageSize]="10" aria-label="Select page">
+        </mat-paginator>
+    </mat-card-footer>
+</mat-card>

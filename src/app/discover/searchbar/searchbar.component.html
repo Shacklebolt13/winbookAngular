@@ -1,0 +1,13 @@
+<form class="container-fluid search-form" [formGroup]="searchForm" (ngSubmit)="search()">
+    <mat-form-field class="search-bar-input" appearance="outline">
+        <mat-label>Enter Username to Search</mat-label>
+        <input matInput formControlName="searchInput">
+        <button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchInput.value.length>0"
+            (click)="searchInput.setValue('')">
+            <mat-icon>close</mat-icon>
+        </button>
+        <button matSuffix mat-icon-button aria-label="Search">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+</form>
