@@ -1,6 +1,6 @@
 import { Component, ErrorHandler, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { catchError, throwError } from 'rxjs';
+import { catchError, Observable, throwError, Subject } from 'rxjs';
 import { UserDiscoveryService } from 'src/app/user-discovery.service';
 
 @Component({
@@ -27,8 +27,8 @@ export class SearchbarComponent implements OnInit {
     this.userDiscovery
       .searchUsers(this.searchInput.value)
       .pipe(catchError(errorHandler))
-      .subscribe((data) => {
-        console.log(data);
+      .subscribe((data: any) => {
+        this.userDiscovery.searchList.next(data);
       });
   }
 

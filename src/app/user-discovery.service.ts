@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
 import { ConstantService } from './constant.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { first } from 'rxjs';
+import { first, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserDiscoveryService {
+  searchList = new Subject<any>();
+
   constructor(
     private constants: ConstantService,
     private httpClient: HttpClient
-  ) {}
+  ) {
+    this.searchList.subscribe((data) => {
+      console.log('gotData: ', data);
+    });
+  }
 
   getUserByUserName(userName: string) {
     this.httpClient
@@ -19,6 +25,7 @@ export class UserDiscoveryService {
       })
       .pipe(first());
   }
+
   searchUsers(searchTerm: string) {
     return this.httpClient
       .get(this.constants.API_URL_SEARCH_USERS + searchTerm, {
