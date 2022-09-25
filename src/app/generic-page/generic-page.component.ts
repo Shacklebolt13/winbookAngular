@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-generic-page',
   templateUrl: './generic-page.component.html',
-  styleUrls: ['./generic-page.component.css']
+  styleUrls: ['./generic-page.component.css'],
 })
 export class GenericPageComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

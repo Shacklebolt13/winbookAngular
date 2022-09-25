@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {}
 
   toggleTheme() {
+    console.log(this.isdark);
     if (this.isdark) {
       localStorage.setItem('theme', 'light-theme');
     } else {
