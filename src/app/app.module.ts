@@ -27,7 +27,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CredentialPageComponent } from './credential-page/credential-page.component';
 import { LoginComponent } from './credential-page/login/login.component';
 import { SignupComponent } from './credential-page/signup/signup.component';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,16 +49,22 @@ import { SignupComponent } from './credential-page/signup/signup.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatInputModule,
     MatCardModule,
     BrowserAnimationsModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatFormFieldModule,
     MatListModule,
     MatSlideToggleModule,
     MatTabsModule,
     MatMenuModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

@@ -1,1 +1,28 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-header class="card-heading">
+        <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card=content">
+        <div class="login-form">
+            <form class="login-form-fields" [formGroup]="loginForm" (ngSubmit)="tryLogIn()">
+
+                <mat-form-field appearance="standard" color="primary">
+                    <mat-label>Enter your username</mat-label>
+                    <input matInput placeholder="my_username" name="username" formControlName="username" required>
+                    <mat-error *ngIf="username.invalid">{{getErrorMessage('username')}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="standard" color="primary">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput type="password" placeholder="********" name="password" formControlName="password"
+                        required>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessage('password')}}</mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" [disabled]="this.submitEnabled" type="submit">Submit</button>
+            </form>
+        </div>
+    </mat-card-content>
+    <mat-card-footer [class]="this.loadingState">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>
