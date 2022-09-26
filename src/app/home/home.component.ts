@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PostCrudService } from './post-crud.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  posts = [1, 2, 3];
-  constructor(private router: Router) {}
+  posts: any;
+  constructor(private router: Router, private postCrud: PostCrudService) {}
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
@@ -18,5 +19,9 @@ export class HomeComponent implements OnInit {
       console.log('token is not defined');
       this.router.navigateByUrl('/account/login');
     }
+    this.postCrud.getAllPosts().subscribe((data) => {
+      console.log(data);
+      this.posts = data;
+    });
   }
 }

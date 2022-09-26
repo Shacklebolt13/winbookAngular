@@ -14,7 +14,7 @@ export class UserDiscoveryService {
     private httpClient: HttpClient
   ) {
     this.searchList.subscribe((data) => {
-      console.log('gotData: ', data);
+      console.log('gotData: ', data.results);
     });
   }
 
